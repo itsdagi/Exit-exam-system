@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 
 public class Questions extends JFrame {
 
-	private JPanel contentPane;
+	JPanel contentPane;
 	private int Count;
 	private ListOfQuestions Ques = new ListOfQuestions();
 
@@ -32,25 +32,25 @@ public class Questions extends JFrame {
 		separator.setBounds(12, 174, 1066, 13);
 		contentPane.add(separator);
 
-		JLabel lblQuestion_title = new JLabel("Question :");
-		lblQuestion_title.setFont(new Font("Arial", Font.BOLD, 24));
-		lblQuestion_title.setHorizontalAlignment(SwingConstants.CENTER);
-		lblQuestion_title.setBounds(66, 184, 193, 46);
-		lblQuestion_title.setForeground(new Color(60, 63, 65)); // Modern text color
-		contentPane.add(lblQuestion_title);
+		JLabel questionTitle = new JLabel("Question :");
+		questionTitle.setFont(new Font("Arial", Font.BOLD, 24));
+		questionTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		questionTitle.setBounds(66, 184, 193, 46);
+		questionTitle.setForeground(new Color(60, 63, 65)); // Modern text color
+		contentPane.add(questionTitle);
 
-		JPanel questionPanel = new JPanel();
-		questionPanel.setBounds(64, 243, 1014, 174);
-		questionPanel.setBackground(Color.WHITE);
-		questionPanel.setBorder(new MatteBorder(5, 5, 15, 5, new Color(200, 200, 200, 150))); // Shadow effect
-		questionPanel.setLayout(null);
-		contentPane.add(questionPanel);
+		JPanel forQuestionPanel = new JPanel();
+		forQuestionPanel.setBounds(64, 243, 1014, 174);
+		forQuestionPanel.setBackground(Color.WHITE);
+		forQuestionPanel.setBorder(new MatteBorder(5, 5, 15, 5, new Color(200, 200, 200, 150))); // Shadow effect
+		forQuestionPanel.setLayout(null);
+		contentPane.add(forQuestionPanel);
 
 		JLabel lblQuestion = new JLabel(Ques.getQuestion(Count));
 		lblQuestion.setForeground(new Color(44, 62, 80)); // Modern color
 		lblQuestion.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		lblQuestion.setBounds(20, 20, 974, 134);
-		questionPanel.add(lblQuestion);
+		forQuestionPanel.add(lblQuestion);
 
 		JPanel numberPanel = new JPanel();
 		numberPanel.setBounds(271, 186, 56, 46);
@@ -174,21 +174,9 @@ public class Questions extends JFrame {
 	private void customizeRadioButton(JRadioButton radioButton) {
 		radioButton.setFont(new Font("Arial", Font.PLAIN, 20));
 		radioButton.setForeground(new Color(60, 63, 65));
-
 		// Set modern icons for radio buttons
 		radioButton.setIcon(new ImageIcon(new ImageIcon("C:\\Users\\dagim\\Downloads\\FinalProjectTextApp\\src\\images\\icons8-radio-button-48.png").getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH)));
 		radioButton.setSelectedIcon(new ImageIcon(new ImageIcon("C:\\Users\\dagim\\Downloads\\FinalProjectTextApp\\src\\images\\icons8-radio-button-100.png").getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH)));
 		radioButton.setOpaque(false);
-	}
-
-	public static void main(String[] args) {
-		EventQueue.invokeLater(() -> {
-			try {
-				Questions frame = new Questions(new Student(), 100, 100);
-				frame.setVisible(true);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		});
 	}
 }
