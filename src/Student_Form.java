@@ -115,10 +115,10 @@ public class Student_Form extends JFrame {
 		getContentPane().add(comboBox_Course);
 
 		// Branch selection
-		JLabel lblBranch = new JLabel("Branch");
-		lblBranch.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
-		lblBranch.setBounds(83, 524, 200, 24);
-		getContentPane().add(lblBranch);
+		JLabel lebelCourse = new JLabel("Branch");
+		lebelCourse.setFont(new Font("Helvetica Neue", Font.PLAIN, 20));
+		lebelCourse.setBounds(83, 524, 200, 24);
+		getContentPane().add(lebelCourse);
 
 		JComboBox<String> comboBox_Branch = new JComboBox<>();
 		comboBox_Branch.setModel(new DefaultComboBoxModel<>(new String[] { "Computer Science", "Management", "Data Science",
