@@ -168,9 +168,11 @@ public class Student_Form extends JFrame {
 					S.setCourse(String.valueOf(comboBox_Course.getSelectedItem()));
 					S.setBranch(String.valueOf(comboBox_Branch.getSelectedItem()));
 					S.setPassword(String.valueOf(textField_Password.getPassword()));
-					Instruction frame1 = new Instruction(S, (int) getLocationOnScreen().getX(), (int) getLocationOnScreen().getY());
+//					Instruction frame1 = new Instruction(S, (int) getLocationOnScreen().getX(), (int) getLocationOnScreen().getY());
 					JOptionPane.showMessageDialog(null, "Registered Successfully");
-					frame1.setVisible(true);
+//					frame1.setVisible(true);
+					Login login = new Login();
+					login.setVisible(true);
 					setVisible(false);
 				}
 			}
