@@ -155,8 +155,8 @@ public class Student_Form extends JFrame {
 		});
 		getContentPane().add(btnClose);
 
-		JButton btnNext = new JButton("CONTINUE");
-		btnNext.addActionListener(new ActionListener() {
+		JButton buttonProceed = new JButton("CONTINUE");
+		buttonProceed.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_Name.getText().isEmpty() || textField_Email.getText().isEmpty()
 						|| String.valueOf(textField_Password.getPassword()).isEmpty() || textField_Roll.getText().isEmpty()) {
@@ -175,22 +175,22 @@ public class Student_Form extends JFrame {
 				}
 			}
 		});
-		btnNext.setBorder(new LineBorder(new Color(100, 149, 237), 2, true));
-		btnNext.setFont(new Font("Helvetica Neue", Font.BOLD, 20));
-		btnNext.setBounds(691, 736, 150, 55);
-		btnNext.setBackground(new Color(100, 149, 237));
-		btnNext.setForeground(Color.BLACK);
-		btnNext.setFocusPainted(false);
-		btnNext.addMouseListener(new java.awt.event.MouseAdapter() {
+		buttonProceed.setBorder(new LineBorder(new Color(100, 149, 237), 2, true));
+		buttonProceed.setFont(new Font("Helvetica Neue", Font.BOLD, 20));
+		buttonProceed.setBounds(691, 736, 150, 55);
+		buttonProceed.setBackground(new Color(100, 149, 237));
+		buttonProceed.setForeground(Color.BLACK);
+		buttonProceed.setFocusPainted(false);
+		buttonProceed.addMouseListener(new java.awt.event.MouseAdapter() {
 			public void mouseEntered(java.awt.event.MouseEvent evt) {
-				btnNext.setForeground(Color.WHITE);
+				buttonProceed.setForeground(Color.WHITE);
 			}
 
 			public void mouseExited(java.awt.event.MouseEvent evt) {
-				btnNext.setForeground(Color.BLACK);
+				buttonProceed.setForeground(Color.BLACK);
 			}
 		});
-		getContentPane().add(btnNext);
+		getContentPane().add(buttonProceed);
 	}
 
 	public static void main(String[] args) {
