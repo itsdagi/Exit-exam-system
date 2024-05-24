@@ -19,7 +19,6 @@ public class ActExitExam {
 
 	private JFrame exitSys;
 
-
 	public static void main(String[] args) {
 		EventQueue.invokeLater(() -> {
             try {
@@ -97,6 +96,7 @@ public class ActExitExam {
 				BorderFactory.createLineBorder(Color.DARK_GRAY, 2),
 				BorderFactory.createLineBorder(Color.LIGHT_GRAY, 5)
 		));
+
 		startBtn.setFocusPainted(false);
 		startBtn.setContentAreaFilled(false);
 		startBtn.setOpaque(true);
