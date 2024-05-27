@@ -173,7 +173,7 @@ public class Student_Form extends JFrame {
 //					frame1.setVisible(true);
 					Login login = new Login();
 					login.setVisible(true);
-					setVisible(false);
+					setVisible(true);
 				}
 			}
 		});

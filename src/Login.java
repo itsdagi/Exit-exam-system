@@ -1,9 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Login extends JFrame {
-   private final LoginPanel loginPanel;
+   LoginPanel loginPanel = new LoginPanel();
 
    public Login() {
       super("Login");
@@ -69,6 +71,7 @@ class LoginPanel extends JPanel {
             Instruction frame1 = new Instruction(new Student(), (int) getLocationOnScreen().getX(), (int) getLocationOnScreen().getY());
             frame1.setVisible(true);
             setVisible(false);
+
          } else {
             JOptionPane.showMessageDialog(this, "Login failed");
          }
@@ -109,5 +112,6 @@ class LoginPanel extends JPanel {
       JPanel panel = new JPanel(new FlowLayout());
       panel.add(component);
       return panel;
+
    }
 }
